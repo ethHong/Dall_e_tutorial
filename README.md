@@ -10,9 +10,10 @@ Purpose of this repository is to practice implementation of Dall-E
 - https://github.com/lucidrains/DALLE-pytorch
 
 ## Setup in local environment
-According to the [original source](https://github.com/lucidrains/DALLE-pytorch), training Dall-E model two essential steps:   
-1. Train VAE using DiscreteVAE in dalle_pytorch module
+According to the [original source](https://github.com/lucidrains/DALLE-pytorch), training Dall-E model two essential steps
+### Step 1. Train VAE using DiscreteVAE in dalle_pytorch module
 
+1. Install required packages, and remove codes using unsupported packages
 ~~~python3
 import torch
 from dalle_pytorch import DiscreteVAE
@@ -35,4 +36,11 @@ loss.backward()
 
 # train with a lot of data to learn a good codebook
 ~~~
-Here, following **DiscreteVAE** class in **dalle_pytorch** module, install all the pre-required packages (Which is not defined within dall_e_pytorch module). However this in **vae.py** module, it loads `python3 GumbleVQ` from `taming transformer` from taming.models.vqgan import VQModel #, GumbelVQ
+Here, following **DiscreteVAE** class in **dalle_pytorch** module, install all the pre-required packages (Which is not defined within dall_e_pytorch module). However this in **vae.py** module, it loads `GumbleVQ` from `taming transformer` as below: 
+
+```python3 
+from taming.models.vqgan import VQModel #, GumbelVQ
+```
+GumbleVQ is no more included in `taming transformer`, therefore modify codes which use GumbleVQ.  
+After that, you could see successfully loading `DiscreteVAE`from `dalle_pytorch.dalle_pytorch`
+

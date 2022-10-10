@@ -13,7 +13,7 @@ Purpose of this repository is to practice implementation of Dall-E
 According to the [original source](https://github.com/lucidrains/DALLE-pytorch), training Dall-E model two essential steps:   
 1. Traind VAE using DiscreteVAE in dalle_pytorch module
 
-~~~
+~~~python3
 import torch
 from dalle_pytorch import DiscreteVAE
 

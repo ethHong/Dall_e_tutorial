@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+torch = "*"
+torchvision = "*"
+torchaudio = "*"
+axial-positional-embedding = "*"
+einops = "*"
+pyyaml = "*"
+tqdm = "*"
+omegaconf = "*"
+taming-transformers = "*"
+tokenizers = "*"
+ftfy = "*"
+regex = "*"
+transformers = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

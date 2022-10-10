@@ -11,7 +11,7 @@ Purpose of this repository is to practice implementation of Dall-E
 
 ## Setup in local environment
 According to the [original source](https://github.com/lucidrains/DALLE-pytorch), training Dall-E model two essential steps:   
-1. Traind VAE using DiscreteVAE in dalle_pytorch module
+1. Train VAE using DiscreteVAE in dalle_pytorch module
 
 ~~~python3
 import torch
@@ -35,5 +35,4 @@ loss.backward()
 
 # train with a lot of data to learn a good codebook
 ~~~
-
-2. 
+Here, following **DiscreteVAE** class in **dalle_pytorch** module, install all the pre-required packages (Which is not defined within dall_e_pytorch module). However this in **vae.py** module, it loads `python3 GumbleVQ` from `taming transformer` from taming.models.vqgan import VQModel #, GumbelVQ
